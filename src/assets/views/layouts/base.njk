@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} | {{ site.siteName }}</title>
+    {% set pageTitle = title if title != site.siteName else site.siteName %}
+    {% set fullTitle = pageTitle + (" | " + site.siteName if pageTitle != site.siteName else "") %}
+    <title>{{ fullTitle }}</title>
     <link rel="stylesheet" href="{{ '/assets/styles.css' | url }}"/>
-    
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | url }}">
     {% metagen
-      title = title + " | " + site.siteName,
+      title = fullTitle,
       desc = description or site.description,
       url = site.url + page.url,
       img = site.url + "/assets/images/whois-kano-vortex.png",
