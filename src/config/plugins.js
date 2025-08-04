@@ -6,9 +6,10 @@ export default {
     eleventyConfig.addPlugin(metagenPlugin);
   },
   image: async function (eleventyConfig) {
+    const isProduction = process.env.ELEVENTY_ENV === "production";
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
       outputDir: "./public/assets/images",
-      urlPath: "/irc-whois-gallery/assets/images/",
+      urlPath: isProduction ? "/irc-whois-gallery/assets/images/" : "/assets/images/",
       extensions: "html",
       formats: ["auto"],
       defaultAttributes: {

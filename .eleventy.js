@@ -73,7 +73,7 @@ export default function(eleventyConfig) {
 
   eleventyConfig.setQuietMode(true);
 
-  return {
+  const config = {
     dir: {
       input: "src",
       output: "public",
@@ -82,6 +82,12 @@ export default function(eleventyConfig) {
       data: 'data',
     },
     templateFormats: ['njk', 'md', '11ty.js'],
-    pathPrefix: "/irc-whois-gallery/"
   };
+
+  // Only add pathPrefix in production
+  if (process.env.ELEVENTY_ENV === "production") {
+    config.pathPrefix = "/irc-whois-gallery/";
+  }
+
+  return config;
 }
