@@ -1,0 +1,243 @@
+/* Font Face */
+@font-face {
+  font-family: 'BlockZone';
+  src: url('../fonts/BlockZone.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+p {
+  margin: 0 0 var(--unit) 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizespeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Branding */
+:root {
+  --color-text: #222;
+  --color-background: #0a0a0a;
+  --color-light: #333;
+  --color-primary: #00ff00;
+  --color-secondary: #00ffff;
+  --unit: 1rem;
+  --container-width: 90ch;
+  --font-family-mono: 'BlockZone', 'Courier New', Courier, monospace;
+  --font-family-sans-serif: 'BlockZone', system, -apple-system;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-text: #fff;
+    --color-background: #0a0a0a;
+  }
+}
+
+/* Base styles */
+body {
+  color: var(--color-text);
+  background-color: var(--color-background);
+  font-family: var(--font-family-mono);
+  padding: var(--unit);
+}
+
+a {
+  color: var(--color-primary);
+}
+
+#main {
+  max-width: var(--container-width);
+  margin: calc(var(--unit) * 2) auto;
+}
+
+#navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-light);
+  margin-bottom: var(--unit);
+  padding-bottom: var(--unit);
+}
+
+#footer {
+  margin: calc(var(--unit) * 3) auto var(--unit);
+  max-width: var(--container-width);
+  border-top: 1px solid var(--color-light);
+  text-align: center;
+  padding-top: var(--unit);
+  font-size: 0.9em;
+}
+
+hr {
+  border-color: var(--color-light);
+}
+
+.navigation-item,
+.navigation-label,
+button {
+  padding: calc(var(--unit) / 2);
+}
+
+.navigation-label {
+  color: var(--color-secondary);
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: var(--unit);
+}
+
+.navigation-link {
+  text-decoration: none;
+  margin-right: var(--unit);
+}
+
+.navigation-link:hover {
+  text-decoration: underline;
+}
+
+.navigation-link.active {
+  color: var(--color-secondary);
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Gallery styles */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: calc(var(--unit) * 2);
+  margin: calc(var(--unit) * 2) 0;
+}
+
+.gallery-item {
+  border: 1px solid var(--color-light);
+  padding: var(--unit);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #333;
+  padding: 5px;
+}
+
+.gallery-item h3 {
+  color: var(--color-primary);
+  margin-bottom: calc(var(--unit) / 2);
+  font-size: 1.1em;
+}
+
+.gallery-item p {
+  font-size: 0.9em;
+  color: #ccc;
+  margin-top: calc(var(--unit) / 2);
+}
+
+label,
+input,
+textarea {
+  width: 100%;
+  display: block;
+}
+
+button {
+  margin: 0;
+  background: var(--color-primary);
+  color: var(--color-background);
+  border: none;
+  padding: calc(var(--unit) / 2) var(--unit);
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--color-secondary);
+}
+
+label {
+  padding: calc(var(--unit) / 2) 0;
+  color: var(--color-primary);
+}
+
+/* Terminal aesthetic */
+h1 {
+  color: var(--color-secondary);
+  border-bottom: 1px solid var(--color-light);
+  padding-bottom: calc(var(--unit) / 2);
+  margin-bottom: var(--unit);
+}
+
+h2 {
+  color: var(--color-secondary);
+  margin-bottom: calc(var(--unit) / 2);
+}

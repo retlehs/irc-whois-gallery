@@ -1,0 +1,26 @@
+{
+  "name": "irc-whois-gallery",
+  "version": "1.0.0",
+  "description": "IRC whois screenshot gallery",
+  "type": "module",
+  "scripts": {
+    "🪐": "cross-env ELEVENTY_ENV=development eleventy --serve",
+    "🚧": "cross-env ELEVENTY_ENV=staging eleventy",
+    "🚀": "cross-env ELEVENTY_ENV=production eleventy",
+    "dev": "npm run 🪐",
+    "staging": "npm run 🚧",
+    "production": "npm run 🚀",
+    "start": "npm run dev",
+    "build": "npm run production"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.0",
+    "@11ty/eleventy-img": "^6.0.2",
+    "cross-env": "^7.0.3",
+    "eleventy-plugin-metagen": "^1.8.3",
+    "esbuild": "^0.25.2",
+    "js-beautify": "^1.15.0",
+    "markdown-it": "^14.1.0",
+    "npm-run-all": "^2.1.0"
+  }
+}

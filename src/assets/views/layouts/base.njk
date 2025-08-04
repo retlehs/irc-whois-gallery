@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | {{ site.siteName }}</title>
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | url }}"/>
+    
+    {% metagen
+      title = title + " | " + site.siteName,
+      desc = description or site.description,
+      url = site.url + page.url,
+      img = site.url + "/assets/images/whois-kano-vortex.png",
+      img_alt = "IRC whois theme screenshot",
+      type = "website",
+      twitter_card_type = "summary_large_image"
+    %}
+
+    {% if ( index == false) %}
+      <meta name="robots" content="noindex,nofollow">
+    {% endif %}
+  </head>
+  <body>
+    <a class="visually-hidden" href="#main">Skip to content</a>
+    
+    <header>
+      {% include "partials/navigation.njk" %}
+    </header>
+
+    <main id="main" tabindex="-1">
+      <header id="page-header">
+        <h1>{{ title }}</h1>
+      </header>
+      {{ content | safe }}
+    </main>
+
+    <footer id="footer">
+      <p>Preserving digital history, one /whois at a time.</p>
+      <p><a href="https://github.com/retlehs/irc-whois-gallery">GitHub</a></p>
+    </footer>
+
+    <script src="{{ '/assets/main.js' | url }}"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+<nav id="navigation" role="navigation">
+  <a class="navigation-label" href="{{ '/' | url }}">IRC Whois Gallery</a>
+  
+  {% for item in navigation.items %}
+    {% set active = 'active' if page.url == item.url else '' %}
+    <a class="navigation-link {{ active }}" href="{{ item.url | url }}"
+       {% if page.url == item.url %}aria-current="page"{% endif %}>
+      {{ item.text }}
+    </a>
+  {% endfor %}
+</nav>

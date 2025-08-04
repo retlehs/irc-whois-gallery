@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "name": "BitchX",
+      "filename": "whois-kano-bitchx.png",
+      "client": "XiRCON",
+      "addon": "kano.tcl"
+    },
+    {
+      "name": "Conio",
+      "filename": "whois-kano-conio.png", 
+      "client": "XiRCON",
+      "addon": "kano.tcl"
+    },
+    {
+      "name": "CRK",
+      "filename": "whois-kano-crk.png",
+      "client": "XiRCON", 
+      "addon": "kano.tcl"
+    },
+    {
+      "name": "Doot",
+      "filename": "whois-kano-doot.png",
+      "client": "XiRCON",
+      "addon": "kano.tcl"
+    },
+    {
+      "name": "Doot: Amnesia",
+      "filename": "whois-kano-doot-amnesia.png",
+      "client": "XiRCON",
+      "addon": "kano.tcl"
+    },
+    {
+      "name": "Doot: Bleek", 
+      "filename": "whois-kano-doot-bleek.png",
+      "client": "XiRCON",
+      "addon": "kano.tcl"
+    },
+    {
+      "name": "Doot: Chop",
+      "filename": "whois-kano-doot-chop.png", 
+      "client": "XiRCON",
+      "addon": "kano.tcl"
+    },
+    {
+      "name": "Doot: Forge",
+      "filename": "whois-kano-doot-forge.png",
+      "client": "XiRCON",
+      "addon": "kano.tcl"
+    },
+    {
+      "name": "Doot: Nitestar", 
+      "filename": "whois-kano-doot-nitestar.png",
+      "client": "XiRCON",
+      "addon": "kano.tcl"
+    },
+    {
+      "name": "Doot: Phade",
+      "filename": "whois-kano-doot-phade.png",
+      "client": "XiRCON", 
+      "addon": "kano.tcl"
+    },
+    {
+      "name": "Gradial",
+      "filename": "whois-kano-gradial.png",
+      "client": "XiRCON",
+      "addon": "kano.tcl"
+    },
+    {
+      "name": "Metal",
+      "filename": "whois-kano-metal.png", 
+      "client": "XiRCON",
+      "addon": "kano.tcl"
+    },
+    {
+      "name": "Osiris",
+      "filename": "whois-kano-osiris.png",
+      "client": "XiRCON",
+      "addon": "kano.tcl"
+    },
+    {
+      "name": "Sphere", 
+      "filename": "whois-kano-sphere.png",
+      "client": "XiRCON",
+      "addon": "kano.tcl"
+    },
+    {
+      "name": "Syntax",
+      "filename": "whois-kano-syntax.png",
+      "client": "XiRCON",
+      "addon": "kano.tcl"
+    },
+    {
+      "name": "Vortex",
+      "filename": "whois-kano-vortex.png",
+      "client": "XiRCON", 
+      "addon": "kano.tcl"
+    }
+  ]
+}
