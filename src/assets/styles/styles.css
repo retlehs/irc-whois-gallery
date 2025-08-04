@@ -78,7 +78,7 @@ select {
 
 /* Branding */
 :root {
-  --color-text: #222;
+  --color-text: #fff;
   --color-background: #0a0a0a;
   --color-light: #333;
   --color-primary: #00ff00;
@@ -87,13 +87,6 @@ select {
   --container-width: 90ch;
   --font-family-mono: 'BlockZone', 'Courier New', Courier, monospace;
   --font-family-sans-serif: 'BlockZone', system, -apple-system;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-text: #fff;
-    --color-background: #0a0a0a;
-  }
 }
 
 /* Base styles */
